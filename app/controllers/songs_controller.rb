@@ -32,7 +32,7 @@ class SongsController < Sinatra::Base
 
     if song_name
       @song = Song.new(name: song_name)
-      if artist_name
+      if artist_name != ""
         @song.artist = Artist.find_or_create_by(name: artist_name)
       end
     else
