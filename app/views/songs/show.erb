@@ -1,5 +1,9 @@
 <h1><%= @song.name %></h1>
 
+<% if flash.has?(params[:notice]) %>
+  <p><%= flash[params[:name]] %></p>
+<% end %>
+
 <h3>Artist: <a href="/artists/<%= @song.artist.slug %>"><%= @song.artist.name %></a></h3>
 
 <h3>Genres:</h3>
