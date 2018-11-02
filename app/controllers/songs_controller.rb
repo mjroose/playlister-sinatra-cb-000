@@ -1,5 +1,6 @@
 class SongsController < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views/songs") }
+  enable :sessions
   use Rack::Flash
 
   get '/songs' do
@@ -45,7 +46,7 @@ class SongsController < Sinatra::Base
 
     @song.save
     flash[:message] = "Successfully created song."
-    
+
     redirect to "/songs/#{@song.slug}"
   end
 end
