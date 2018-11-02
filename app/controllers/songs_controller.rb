@@ -71,7 +71,6 @@ class SongsController < Sinatra::Base
   end
 
   patch '/songs/:slug' do
-    binding.pry
     @song = Song.find_by_slug(params[:slug])
     song_name = params["song"]["name"]
     artist_name = params["artist"]["name"]
