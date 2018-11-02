@@ -87,6 +87,8 @@ class SongsController < Sinatra::Base
         @song.genres << Genre.find(genre_id)
       end
     end
+
+    redirect to :"/songs/#{@song.slug}"
   end
 
 end
