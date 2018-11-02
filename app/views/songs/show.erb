@@ -1,7 +1,7 @@
 <h1><%= @song.name %></h1>
 
-<% if flash.has?(params[:notice]) %>
-  <p><%= flash[params[:notice]] %></p>
+<% if flash.has?(:notice) %>
+  <p><%= flash[:notice] %></p>
 <% end %>
 
 <% if @song.artist %>
