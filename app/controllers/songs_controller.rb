@@ -89,6 +89,7 @@ class SongsController < Sinatra::Base
     end
 
     @song.save
+    flash[:notice] = "Successfully updated song."
     redirect to :"/songs/#{@song.slug}"
   end
 
