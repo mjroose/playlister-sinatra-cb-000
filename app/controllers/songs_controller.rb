@@ -69,4 +69,8 @@ class SongsController < Sinatra::Base
 
     redirect to "/songs/#{@song.slug}"
   end
+
+  patch '/songs/:slug' do
+    binding.pry
+  end
 end
