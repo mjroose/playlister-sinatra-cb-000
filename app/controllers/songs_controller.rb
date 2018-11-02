@@ -85,7 +85,8 @@ class SongsController < Sinatra::Base
 
       @song.genres = params["genres"].collect do |genre_id|
         Genre.find_by(id: genre_id) if !nil
-      end
+      end || []
     end
   end
+  
 end
