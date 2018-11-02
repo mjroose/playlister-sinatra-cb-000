@@ -1,3 +1,5 @@
+require '../config/environment'
+
 class LibraryParser
   def files
     data_path = File.join(File.dirname(__FILE__), '..', 'db', 'data')
