@@ -1,3 +1,5 @@
+require 'rack-flash'
+
 class SongsController < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views/songs") }
   enable :sessions
