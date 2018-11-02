@@ -18,7 +18,7 @@ class SongsController < Sinatra::Base
   get '/songs/:slug/edit' do
     @genres = Genre.all
     @song = Song.find_by_slug(params[:slug])
-    @artist = song.artist.name || ""
+    @artist_name = song.artist.name || ""
 
     if @song
       erb :edit
