@@ -88,6 +88,7 @@ class SongsController < Sinatra::Base
       end
     end
 
+    @song.save
     redirect to :"/songs/#{@song.slug}"
   end
 
