@@ -82,9 +82,10 @@ class SongsController < Sinatra::Base
         @song.artist = artist
       end
 
-      @song.genres = params["genres"].collect do |genre_id|
-        Genre.find(genre_id)
-      end || []
+      @song.genres = []
+      params["genres"].each do |genre_id|
+        @song.genres << Genre.find(genre_id)
+      end
     end
   end
 
