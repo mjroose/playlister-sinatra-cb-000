@@ -5,9 +5,11 @@
 <% end %>
 
 <% if @song.artist %>
-  <% artist = @song.artist %>
+  <h3>Artist: <a href="/artists/<%= @song.artist.slug %>"><%= @song.artist.name %></a></h3>
+<% else %>
+  <h3>Artist:</h3>
 <% end %>
-<h3>Artist: <a href="/artists/<%= artist.slug if artist %>"><%= @song.artist.name %></a></h3>
+
 
 <h3>Genres:</h3>
 <ul>
