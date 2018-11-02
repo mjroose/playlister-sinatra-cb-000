@@ -47,7 +47,7 @@ class SongsController < Sinatra::Base
     end
 
     @song.save
-    flash[:message] = "Successfully created song."
+    flash[:notice] = "Successfully created song."
 
     redirect to "/songs/#{@song.slug}"
   end
