@@ -20,6 +20,8 @@ class SongsController < Sinatra::Base
 
     if @song
       erb :edit
+    else
+      redirect to :'/songs'
     end
   end
 
